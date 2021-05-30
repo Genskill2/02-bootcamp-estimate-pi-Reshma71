@@ -4,14 +4,14 @@ import unittest
 def wallis(n):
     prod=1
     for i in range(1,n+1):
-        prod=prod*(4*i**2/(4*i**2-1))
+        prod=prod*(4*i*i/(4*i*i-1))
     return 2*prod
 def monte_carlo(n):
     c=0
     for i in range(1,n+1):
         x=random.random()
         y=random.random()
-        d=math.sqrt(x**2+y**2)/2
+        d=math.sqrt(x**2+y**2)
         if d<=1:
             c=c+1
     return 4*c/n
