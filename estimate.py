@@ -4,8 +4,8 @@ import unittest
 def wallis(n):
     prod=1
     for i in range(1,n+1):
-        prod=prod+*(4*(i**2/i**2-1))
-    return 2*sum
+        prod=prod*(4*i**2/(4*i**2-1))
+    return 2*prod
 def monte_carlo(n):
     c=0
     for i in range(1,n+1):
